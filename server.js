@@ -48,15 +48,22 @@ app.get('/',(req,res) => {
     welcomeMessage: 'Welcome '
   })
 });
-  app.get('/about',(req,res) => {
+app.get('/about',(req,res) => {
     res.render('about.hbs',{
       pageTitle: 'About Page',
     });
   });
-
-  app.get('/bad', (req,res) => {
+app.get('/portfolio',(req,res) => {
+    res.render('portfolio.hbs',{
+      pageTitle : 'Portfolio Page'
+    });
+})
+ app.get('/bad', (req,res) => {
     res.send({errorMessage: 'Something went wrong!'});
   })
+
+
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
