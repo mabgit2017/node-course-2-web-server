@@ -1,3 +1,5 @@
 node_modules/
 progit.pdf
 server.log
+heroku-x64.exe
+.gitignore
